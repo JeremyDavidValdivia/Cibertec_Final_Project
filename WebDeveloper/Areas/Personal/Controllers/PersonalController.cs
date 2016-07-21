@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using WebDeveloper.DataAccess;
+using WebDeveloper.Model;
 using WebDeveloper.Models;
 
 namespace WebDeveloper.Areas.Personal.Controllers
@@ -29,9 +30,29 @@ namespace WebDeveloper.Areas.Personal.Controllers
             return PartialView("_EmailList",_personalRepository.EmailList(id.Value));
         }
 
-        public PartialViewResult Create()
+        public ActionResult Create()
         {
             return PartialView("_Create");
+        }
+
+        //public PartialViewResult Create()
+        //{
+        //    return PartialView("_Create");
+        //}
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Person person)
+        {
+            if (!ModelState.IsValid) return PartialView("_Create", person);
+            person.rowguid = Guid.NewGuid();
+            person.BusinessEntity = new BusinessEntity
+            {
+                rowguid = person.rowguid,
+                ModifiedDate = person.ModifiedDate
+            };
+            _personalRepository.Add(person);
+            return RedirectToAction("Index");
         }
 
     }
