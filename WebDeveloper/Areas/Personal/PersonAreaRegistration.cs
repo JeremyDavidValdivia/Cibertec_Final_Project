@@ -1,23 +1,23 @@
 ﻿using System.Web.Mvc;
 
-namespace WebDeveloper.Areas.Person
+namespace WebDeveloper.Areas.Personal
 {
-    public class PersonAreaRegistration : AreaRegistration 
+    public class PersonalAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Person";
+                return "Personal";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Person_default",
+                "Personal_default",
                 "Personal/{action}/{id}",
-                new { controller="Person", action = "Index", id = UrlParameter.Optional }
+                new { controller="Personal", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
