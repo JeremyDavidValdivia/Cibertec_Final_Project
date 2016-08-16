@@ -117,13 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FirstName" xml:space="preserve">
-    <value>First Name</value>
+  <data name="City" xml:space="preserve">
+    <value>Ciudad</value>
   </data>
-  <data name="LastName" xml:space="preserve">
-    <value>Last Name</value>
+  <data name="FName" xml:space="preserve">
+    <value>Primer Nombre</value>
   </data>
-  <data name="MiddleName" xml:space="preserve">
-    <value>Middle Name</value>
+  <data name="LName" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="Salary" xml:space="preserve">
+    <value>Salario</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>Código Zip</value>
   </data>
 </root>
