@@ -25,7 +25,7 @@ namespace WebDeveloper.DataAccess
             {
                 return _config ?? new MapperConfiguration(cfg =>
                 {
-                    cfg.CreateMap<Person, PersonModelView>();
+                    cfg.CreateMap<Authors, AuthorsModelView>();
                 });
             }
         }

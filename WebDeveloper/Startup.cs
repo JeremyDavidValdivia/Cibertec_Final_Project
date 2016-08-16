@@ -37,11 +37,11 @@ namespace WebDeveloper
 
                     var user = new WebDeveloperUser
                     {
-                        UserName = "juvega@gmail.com",
-                        Email = "juvega@gmail.com"
+                        UserName = "jeremy.david@jcservicios.com",
+                        Email = "jeremy.david@jcservicios.com"
                     };
 
-                    string userPassword = "Passw0rd2016";
+                    string userPassword = "Abc_123";
 
                     var userCreation = userManager.Create(user, userPassword);
 
@@ -58,17 +58,6 @@ namespace WebDeveloper
                     var role = new IdentityRole
                     {
                         Name = "Manager"
-                    };
-                    roleManager.Create(role);
-
-                }
-
-                // creating Creating Employee role    
-                if (!roleManager.RoleExists("Employee"))
-                {
-                    var role = new IdentityRole
-                    {
-                        Name = "Employee"
                     };
                     roleManager.Create(role);
 
